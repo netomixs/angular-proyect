@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Document</title>
+</head>
+<body>
+   <div class="container-fluid">
+    <form [formGroup]="formStudents" class="row justify-content-center">
+        <h1>Formulario de alumnos</h1>
+        <div class="col-8">
+            <div class="form-group">
+                <label class="form-label">Nombre del alumno:</label>
+                <input formControlName="nombre_alumno" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="form-group">
+                <label class="form-label">Número de control:</label>
+                <input formControlName="num_control" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="form-group">
+                <label class="form-label">Clave de la carrera:</label>
+                <input formControlName="clave_carrera" type="text" class="form-control">
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="form-group">
+                <label class="form-label">Esta inscrito:</label>
+                <select formControlName="esta_inscrito" name="" id="" class="form-control">
+                    <option value=1>Si</option>
+                    <option value=0>No</option>
+                </select>
+            </div>
+        </div>
+            <div class="col-8 mt-3">
+                <button class="btn btn-success" (click)="submitStudents()" [disabled]="formStudents.invalid">
+                    Registrar
+                </button>
+            </div>
+    </form>
+</div>
+</body>
+</html>

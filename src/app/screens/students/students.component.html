@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-17">
+            <h1 *ngIf="!studentList"></h1>
+            <table class="table" *ngIf="studentList">
+                <thead dark>
+                    <tr>
+                        <th>Numero de control</th>
+                        <th>Nombre</th>
+                        <th>Clave de carrera</th>
+                        <th>Esta inscrito</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of studentList">
+                        <td>
+                            {{item.Control}}
+
+                        </td>
+                        <td>
+                            {{item.Nombre}}
+                        </td>
+                        <td>
+                            {{item.Carrera}}
+                        </td>
+                        <td>
+                            {{item.Inscripcion}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table> 
+    
+        </div>
+    </div>    
+    </div>
+    
